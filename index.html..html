@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>京阪介護ナビ | 介護施設・老人ホーム相談は京阪沿線の専門家へ</title>
+<meta name="description" content="寝屋川・枚方・守口・門真・交野など北河内エリアの介護施設・老人ホーム探しをサポート。施設紹介から住み替え・不動産相談まで無料でご相談いただけます。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --maroon:#6B1E2E;
+  --maroon2:#8B2A3E;
+  --cream:#F5F0E8;
+  --cream2:#EDE5D0;
+  --orange:#E8660A;
+  --green:#2D6B3C;
+  --green2:#3D8B50;
+  --dk:#1A0A00;
+  --mid:#5A3A2A;
+  --lt:#FAF7F2;
+  --serif:'Noto Serif JP',serif;
+  --sans:'Noto Sans JP',sans-serif;
+}
+body{background:var(--lt);color:var(--dk);font-family:var(--sans);font-weight:300;line-height:1.8}
+
+/* HEADER */
+header{background:var(--maroon);padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100}
+.logo{font-family:var(--serif);color:var(--cream);font-size:1.1rem;font-weight:600;letter-spacing:0.05em;display:flex;align-items:center;gap:8px}
+.logo-mark{width:28px;height:28px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
+.header-tel{color:var(--cream2);font-size:12px;text-align:right;line-height:1.4}
+.header-tel strong{font-size:15px;font-weight:700;color:#fff}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--maroon) 0%,var(--maroon2) 50%,#4A1525 100%);padding:48px 20px 40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40px;right:-40px;width:220px;height:220px;border:40px solid rgba(255,255,255,0.04);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-20px;width:160px;height:160px;border:30px solid rgba(232,102,10,0.15);border-radius:50%}
+.hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
+.hero-badge{display:inline-block;background:var(--orange);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:4px;margin-bottom:16px;letter-spacing:0.1em}
+.hero h1{font-family:var(--serif);font-size:clamp(1.4rem,5vw,2.2rem);color:#fff;font-weight:600;line-height:1.5;margin-bottom:12px}
+.hero h1 em{font-style:normal;color:var(--cream2)}
+.hero p{font-size:13px;color:rgba(255,255,255,0.85);line-height:2;margin-bottom:24px}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-main{display:inline-flex;align-items:center;gap:6px;background:var(--green);color:#fff;font-size:13px;font-weight:700;padding:13px 24px;border-radius:8px;text-decoration:none;letter-spacing:0.05em}
+.btn-sub{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);color:#fff;font-size:13px;font-weight:400;padding:13px 24px;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.3)}
+
+/* STRIP */
+.strip{background:var(--cream2);padding:10px 20px;overflow:hidden}
+.strip-inner{display:flex;gap:24px;font-size:12px;color:var(--mid);white-space:nowrap;animation:scroll 20s linear infinite}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.strip-item{display:flex;align-items:center;gap:6px}
+.strip-dot{width:6px;height:6px;background:var(--maroon);border-radius:50%;flex-shrink:0}
+
+/* WORRIES */
+.worries{padding:40px 20px;max-width:640px;margin:0 auto}
+.sec-label{font-size:10px;letter-spacing:0.35em;color:var(--maroon);font-weight:700;margin-bottom:8px;text-transform:uppercase}
+.sec-title{font-family:var(--serif);font-size:clamp(1.1rem,3.5vw,1.6rem);font-weight:600;color:var(--dk);margin-bottom:20px;line-height:1.5}
+.worry-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.worry-item{background:#fff;border-radius:10px;padding:14px 16px;border-left:4px solid var(--maroon);display:flex;align-items:center;gap:12px;font-size:13px;color:var(--dk);box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.worry-icon{font-size:20px;flex-shrink:0}
+.resolve{background:var(--green);border-radius:10px;padding:16px 18px;color:#fff;font-size:13px;line-height:2;text-align:center}
+.resolve strong{font-size:15px;display:block;margin-bottom:4px}
+
+/* SERVICES */
+.services{background:var(--cream);padding:40px 20px}
+.services-inner{max-width:640px;margin:0 auto}
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+@media(max-width:400px){.service-grid{grid-template-columns:1fr}}
+.service-card{background:#fff;border-radius:12px;padding:20px 16px;border-top:4px solid var(--maroon);box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.service-card.green{border-top-color:var(--green)}
+.service-card.orange{border-top-color:var(--orange)}
+.service-card.maroon2{border-top-color:var(--maroon2)}
+.service-icon{font-size:24px;margin-bottom:10px}
+.service-card h3{font-size:14px;font-weight:700;color:var(--dk);margin-bottom:6px}
+.service-card p{font-size:11px;color:#888;line-height:1.8}
+.service-card .fee{font-size:11px;color:var(--green);font-weight:700;margin-top:8px}
+
+/* AREA */
+.area{padding:40px 20px;max-width:640px;margin:0 auto}
+.area-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.area-tag{background:#fff;border:1px solid var(--cream2);border-radius:20px;padding:6px 14px;font-size:12px;color:var(--mid);box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.area-tag.main{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+
+/* FLOW */
+.flow{background:var(--maroon);padding:40px 20px}
+.flow-inner{max-width:640px;margin:0 auto}
+.flow-inner .sec-label{color:var(--cream2)}
+.flow-inner .sec-title{color:#fff}
+.flow-steps{display:flex;flex-direction:column;gap:0;margin-top:20px}
+.flow-step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.1)}
+.flow-step:last-child{border-bottom:none}
+.flow-num{font-family:var(--serif);font-size:1.8rem;color:rgba(255,255,255,0.2);font-weight:600;min-width:40px;line-height:1}
+.flow-content h3{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px}
+.flow-content p{font-size:12px;color:rgba(255,255,255,0.75);line-height:1.8}
+
+/* CTA */
+.cta{padding:40px 20px;max-width:640px;margin:0 auto;text-align:center}
+.cta-box{background:var(--green);border-radius:14px;padding:28px 20px}
+.cta-box h2{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:8px}
+.cta-box p{font-size:12px;color:rgba(255,255,255,0.88);line-height:2;margin-bottom:20px}
+.line-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--green);font-size:14px;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none}
+.line-btn svg{width:18px;height:18px;fill:var(--green)}
+
+/* FOOTER */
+footer{background:var(--dk);padding:24px 20px;text-align:center;color:rgba(255,255,255,0.4);font-size:11px;line-height:2}
+footer a{color:rgba(255,255,255,0.6);text-decoration:none}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2654818706758131" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-mark">🚃</div>
+    京阪介護ナビ
+  </div>
+  <div class="header-tel">
+    無料相談受付中<br>
+    <strong>お気軽にどうぞ</strong>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">北河内・京阪沿線エリア特化</div>
+    <h1>介護が必要になったとき<br><em>最初に開くサイト</em></h1>
+    <p>施設探し・住み替え・費用の不安・家族の悩み。<br>寝屋川・枚方・守口・門真エリアの専門家が<br>無料でサポートします。</p>
+    <div class="hero-btns">
+      <a class="btn-main" href="#contact">無料相談する</a>
+      <a class="btn-sub" href="#services">サービスを見る</a>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="strip-inner">
+    <span class="strip-item"><span class="strip-dot"></span>寝屋川市</span>
+    <span class="strip-item"><span class="strip-dot"></span>枚方市</span>
+    <span class="strip-item"><span class="strip-dot"></span>守口市</span>
+    <span class="strip-item"><span class="strip-dot"></span>門真市</span>
+    <span class="strip-item"><span class="strip-dot"></span>交野市</span>
+    <span class="strip-item"><span class="strip-dot"></span>大阪市</span>
+    <span class="strip-item"><span class="strip-dot"></span>京都市</span>
+    <span class="strip-item"><span class="strip-dot"></span>施設紹介無料</span>
+    <span class="strip-item"><span class="strip-dot"></span>相談無料</span>
+    <span class="strip-item"><span class="strip-dot"></span>寝屋川市</span>
+    <span class="strip-item"><span class="strip-dot"></span>枚方市</span>
+    <span class="strip-item"><span class="strip-dot"></span>守口市</span>
+    <span class="strip-item"><span class="strip-dot"></span>門真市</span>
+    <span class="strip-item"><span class="strip-dot"></span>交野市</span>
+    <span class="strip-item"><span class="strip-dot"></span>大阪市</span>
+    <span class="strip-item"><span class="strip-dot"></span>京都市</span>
+    <span class="strip-item"><span class="strip-dot"></span>施設紹介無料</span>
+    <span class="strip-item"><span class="strip-dot"></span>相談無料</span>
+  </div>
+</div>
+
+<div class="worries">
+  <p class="sec-label">Worries</p>
+  <h2 class="sec-title">こんなお悩み<br>ありませんか？</h2>
+  <div class="worry-list">
+    <div class="worry-item"><span class="worry-icon">😔</span>親の介護が必要になったけど、何から始めればいいかわからない</div>
+    <div class="worry-item"><span class="worry-icon">🏠</span>施設に入れたいけど、費用がどのくらいかかるか不安</div>
+    <div class="worry-item"><span class="worry-icon">🔍</span>エリアにどんな施設があるか調べても多すぎて選べない</div>
+    <div class="worry-item"><span class="worry-icon">🏡</span>親の家をどうするか、売るべきか貸すべきか迷っている</div>
+    <div class="worry-item"><span class="worry-icon">👨‍👩‍👧</span>兄弟間で介護の方針が決まらず家族でもめている</div>
+    <div class="worry-item"><span class="worry-icon">🔑</span>1人では広すぎる。駅や病院の近くに引っ越したいけど高齢者は借りにくいと聞いた</div>
+  </div>
+  <div class="resolve">
+    <strong>全部、まとめて相談できます</strong>
+    京阪介護ナビは施設紹介から不動産・お金の相談まで<br>ワンストップで無料サポートします
+  </div>
+</div>
+
+<div class="services" id="services">
+  <div class="services-inner">
+    <p class="sec-label">Services</p>
+    <h2 class="sec-title">サービス一覧</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">🏥</div>
+        <h3>介護施設・老人ホーム紹介</h3>
+        <p>条件・予算・エリアに合った施設を無料でご紹介します。</p>
+        <div class="fee">✓ 紹介料無料</div>
+      </div>
+      <div class="service-card green">
+        <div class="service-icon">🏠</div>
+        <h3>実家・住み替え不動産相談</h3>
+        <p>空き家になった実家の売却・賃貸・活用方法をご提案します。</p>
+        <div class="fee">✓ 相談無料</div>
+      </div>
+      <div class="service-card orange">
+        <div class="service-icon">💰</div>
+        <h3>介護費用・資金相談</h3>
+        <p>施設費用の目安、利用できる公的制度、資金計画についてご説明します。</p>
+        <div class="fee">✓ 相談無料</div>
+      </div>
+      <div class="service-card maroon2">
+        <div class="service-icon">💬</div>
+        <h3>家族の悩み・介護相談</h3>
+        <p>家族間の方針の違い、在宅か施設かの判断など、まずは話を聞きます。</p>
+        <div class="fee">✓ 完全無料</div>
+      </div>
+      <div class="service-card" style="border-top-color:#4A7FB5;grid-column:1/-1">
+        <div class="service-icon">🔑</div>
+        <h3>シニア向け賃貸・住み替え相談</h3>
+        <p>「1人には広すぎる」「駅や病院の近くに引っ越したい」「高齢者でも借りられる部屋を探したい」——そんな住み替えのご相談もお任せください。京阪沿線エリアで駅近・病院近・バリアフリー対応の物件をご紹介します。</p>
+        <div class="fee">✓ 相談無料　✓ 高齢者歓迎物件に特化</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="area">
+  <p class="sec-label">Area</p>
+  <h2 class="sec-title">対応エリア</h2>
+  <div class="area-tags">
+    <span class="area-tag main">寝屋川市</span>
+    <span class="area-tag main">枚方市</span>
+    <span class="area-tag main">守口市</span>
+    <span class="area-tag main">門真市</span>
+    <span class="area-tag main">交野市</span>
+    <span class="area-tag">大阪市旭区</span>
+    <span class="area-tag">大阪市都島区</span>
+    <span class="area-tag">四條畷市</span>
+    <span class="area-tag">大東市</span>
+    <span class="area-tag">京都市伏見区</span>
+    <span class="area-tag">京都市南区</span>
+    <span class="area-tag">その他応相談</span>
+  </div>
+</div>
+
+<div style="background:var(--cream);padding:40px 20px">
+  <div style="max-width:640px;margin:0 auto">
+    <p class="sec-label">Column</p>
+    <h2 class="sec-title">介護・老後のお役立ち情報</h2>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <a href="./article1.html" style="background:#fff;border-radius:10px;padding:16px;text-decoration:none;color:var(--dk);border-left:4px solid var(--maroon);display:block;font-size:13px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.06)">📄 特別養護老人ホームと有料老人ホームの違いとは？費用・入居条件を徹底比較</a>
+      <a href="./article2.html" style="background:#fff;border-radius:10px;padding:16px;text-decoration:none;color:var(--dk);border-left:4px solid var(--maroon);display:block;font-size:13px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.06)">📄 介護保険で使えるサービス一覧｜在宅介護で活用できる制度をわかりやすく解説</a>
+      <a href="./article3.html" style="background:#fff;border-radius:10px;padding:16px;text-decoration:none;color:var(--dk);border-left:4px solid var(--maroon);display:block;font-size:13px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.06)">📄 高齢者が賃貸を借りるコツ｜断られる理由と対策【大阪・京阪沿線版】</a>
+      <a href="./article4.html" style="background:#fff;border-radius:10px;padding:16px;text-decoration:none;color:var(--dk);border-left:4px solid var(--maroon);display:block;font-size:13px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.06)">📄 親の介護で兄弟がもめる前に決めておくべきこと｜役割分担と費用負担の考え方</a>
+      <a href="./article5.html" style="background:#fff;border-radius:10px;padding:16px;text-decoration:none;color:var(--dk);border-left:4px solid var(--maroon);display:block;font-size:13px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.06)">📄 老後に住み替えを考えるタイミングとは？一人暮らしのシニアが知っておきたいこと</a>
+    </div>
+  </div>
+</div>
+
+<div class="flow">
+  <div class="flow-inner">
+    <p class="sec-label">Flow</p>
+    <h2 class="sec-title">ご相談の流れ</h2>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <div class="flow-content">
+          <h3>お問い合わせフォームから相談</h3>
+          <p>「親の施設を探したい」「実家をどうするか相談したい」——どんな内容でもOKです。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <div class="flow-content">
+          <h3>ヒアリング・情報整理</h3>
+          <p>状況・希望・予算・エリアをお聞きして、最適なプランを整理します。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <div class="flow-content">
+          <h3>施設・物件のご提案</h3>
+          <p>条件に合った施設や不動産をご提案します。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <div class="flow-content">
+          <h3>契約・入居サポート</h3>
+          <p>入居手続き・契約まで一貫してサポート。入居後もご相談いただけます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta" id="contact">
+  <div class="cta-box">
+    <h2>まず、話してみてください</h2>
+    <p>「何から始めればいいかわからない」<br>そんな状態でも大丈夫です。<br>お問い合わせフォームからご相談ください。相談無料。</p>
+    <a class="line-btn" href="#">お問い合わせはこちら</a>
+  </div>
+</div>
+
+<footer>
+  <p>京阪介護ナビ</p>
+  <p>寝屋川・枚方・守口・門真・交野 / 京阪沿線エリア特化</p>
+  <p style="margin-top:8px"><a href="./privacy_policy.html">プライバシーポリシー</a>　<a href="#">運営者情報</a></p>
+  <p style="margin-top:8px">© 2026 京阪介護ナビ</p>
+</footer>
+
+</body>
+</html>
